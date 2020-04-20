@@ -1,11 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
-body {
+body,
+html,
+main {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  height: 100%;
+  margin: 0;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+}
+
+#logo {
+  float: left;
+  margin-left: 10vh;
 }
 
 nav {
   float: right;
+  height: 110px;
+  margin-right: 10vh;
+}
+
+.nav-link {
+  position: relative;
+  top: 30%;
+  padding: 15px;
+  font-size: x-large;
 }
 
 a {
@@ -13,6 +40,136 @@ a {
   color: black;
 }
 
-h1 {
+h1,
+.nav-link {
   font-family: "Space Mono", monospace;
+}
+
+main {
+  top: 111px;
+  position: relative;
+  z-index: -1;
+  clear: both;
+}
+
+#about,
+#services,
+#pricing,
+#contact {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about {
+  background-image: url(../images/about.png);
+  min-height: 100%;
+}
+
+.about-text {
+  position: relative;
+  left: 0;
+  top: 15vw;
+  width: 100%;
+  color: #000;
+}
+
+.about-text p {
+  width: 50vw;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #111;
+  padding: 18px;
+  text-align: justify;
+}
+
+#services {
+  background-image: url(../images/services.png);
+  min-height: 600px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: xx-large;
+  letter-spacing: 2px;
+}
+
+.services {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+.services-text {
+  color: #111;
+  background-color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.services-text span {
+  padding: 20px;
+  text-align: center;
+}
+
+span i {
+  font-size: 100px;
+  padding-bottom: 20px;
+}
+
+#pricing {
+  background-image: url(../images/packages.png);
+  min-height: 600px;
+}
+
+.pricing {
+  width: 100%;
+  padding: 0 150px;
+}
+
+.pricing-text {
+  width: 80%;
+  text-align: justify;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pkg-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.card-title {
+  width: 100%;
+  text-align: center;
+}
+
+.card-list {
+  list-style-type: none;
+}
+
+.card-list > li {
+  padding: 5px;
+}
+
+.price {
+  vertical-align: text-bottom;
+}
+
+#contact {
+  background-image: url(../images/contact.png);
 }
