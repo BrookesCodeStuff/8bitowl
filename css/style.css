@@ -12,20 +12,21 @@ main {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   background-color: white;
 }
 
 #logo {
   float: left;
-  margin-left: 10vh;
+  padding-left: 50px;
 }
 
 nav {
   float: right;
   height: 110px;
-  margin-right: 10vh;
+  padding-right: 50px;
+  overflow-x: hidden;
 }
 
 .nav-link {
@@ -40,6 +41,10 @@ a {
   color: black;
 }
 
+.nav-link:hover {
+  text-decoration: underline dotted 5px;
+}
+
 h1,
 .nav-link {
   font-family: "Space Mono", monospace;
@@ -49,7 +54,6 @@ main {
   top: 111px;
   position: relative;
   z-index: -1;
-  clear: both;
 }
 
 #about,
@@ -75,15 +79,16 @@ main {
   top: 15vw;
   width: 100%;
   color: #000;
+  overflow-x: hidden;
 }
 
 .about-text p {
   width: 50vw;
   margin: 0 auto;
-  background-color: #fff;
-  color: #111;
+  color: white;
   padding: 18px;
   text-align: justify;
+  background: transparent;
 }
 
 #services {
@@ -100,15 +105,17 @@ main {
   font-variant: small-caps;
   font-size: xx-large;
   letter-spacing: 2px;
+  overflow-x: hidden;
 }
 
 .services {
   width: 100%;
   text-align: center;
-  margin: 20px;
+  margin: 0px;
+  overflow-x: hidden;
 }
 
-.services-text {
+.services-text, .contact-container {
   color: #111;
   background-color: #fff;
   width: 50%;
@@ -134,12 +141,13 @@ span i {
 
 .pricing {
   width: 100%;
-  padding: 0 150px;
+  overflow-x: hidden;
 }
 
 .pricing-text {
   width: 80%;
   text-align: justify;
+  margin: 0 auto;
 }
 
 .cards-container {
@@ -151,15 +159,19 @@ span i {
   margin: 10px;
   padding: 10px;
   border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
 }
 
 .card-title {
   width: 100%;
   text-align: center;
+  color: #1b6eb3;
 }
 
 .card-list {
   list-style-type: none;
+  padding-bottom: 20px;
 }
 
 .card-list > li {
@@ -167,9 +179,43 @@ span i {
 }
 
 .price {
-  vertical-align: text-bottom;
+  position: absolute;
+  left: 45%;
+  bottom: 5px;
+  color: #1b6eb3;
 }
 
 #contact {
   background-image: url(../images/contact.png);
+  height: 600px;
+}
+
+.contact {
+  height: 600px;  
+  width: 100%;
+}
+
+.contact p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.contact-container {
+  margin-top: 50px;
+}
+
+.contact i {
+  font-size: 100px;
+}
+
+.contact-container a {
+  text-align: center;
+}
+
+.contact-container a:hover {
+  color: #1b6eb3;
+}
+
+.clear {
+  clear: both;
 }
